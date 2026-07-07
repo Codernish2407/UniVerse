@@ -1,5 +1,3 @@
-# System Design
-
 Frontend
 
 ↓
@@ -22,8 +20,6 @@ Cloudinary
 
 Gemini API
 
----
-
 Authentication
 
 Firebase Authentication
@@ -35,8 +31,6 @@ JWT Token
 ↓
 
 Protected Routes
-
----
 
 Image Upload
 
@@ -53,8 +47,6 @@ Cloudinary
 ↓
 
 Image URL stored in MongoDB
-
----
 
 AI Flow
 
