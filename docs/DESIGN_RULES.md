@@ -222,3 +222,10 @@ Reusable Toasts
 - Follow the official UniVerse color palette.
 - Never introduce random colors for different modules.
 - Every screen should feel like part of one product.
+
+Usage Rules
+
+• Never use cyan as a dominant Hero color.
+• Cyan should occupy less than 10% of any screen.
+• Purple remains the primary brand accent.
+• Use cyan only where AI functionality needs emphasis.
