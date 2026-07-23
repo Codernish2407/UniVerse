@@ -1,15 +1,12 @@
 import { Navbar } from "@/components/features/landing/navbar/Navbar";
+import Hero from "@/components/features/landing/hero/Hero";
 
-export default function Home() {
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="relative min-h-screen bg-background">
       <Navbar />
-
-      <div className="flex h-screen items-center justify-center">
-        <h1 className="text-5xl font-bold text-white">
-          Navbar Working ✅
-        </h1>
-      </div>
+      <Hero />
     </main>
   );
 }
