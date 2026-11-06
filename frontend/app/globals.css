@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* UniVerse design tokens. Change colors HERE only; components use semantic names. */
+:root {
+  --background: #0b1023;
+  --foreground: #f5f4fa;
+  --sidebar: #0d1328;
+  --elevated: #12192e;
+  --card: #171e34;
+  --card-foreground: #f5f4fa;
+  --popover: #12192e;
+  --popover-foreground: #f5f4fa;
+  --hover: #202841;
+  --muted: #202841;
+  --muted-foreground: #a5a9be;
+  --subtle: #8089a3;
+  --border: #293149;
+  --input: #293149;
+  --ring: #8b5cf6;
+
+  --primary: #6c63ff;
+  /* AA-safe variants: strong = filled-button background under white text; soft = violet text on dark surfaces */
+  --primary-strong: #5a51f0;
+  --primary-soft: #a9a4ff;
+  --secondary-soft: #b8a1ff;
+  --primary-foreground: #ffffff;
+  --secondary: #8b5cf6;
+  --secondary-foreground: #ffffff;
+  --accent: #06b6d4;
+  --accent-foreground: #04222b;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --error-soft: #f87171; /* AA-safe red for text */
+  --destructive: #ef4444;
+
+  --radius: 0.875rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar: var(--sidebar);
+  --color-elevated: var(--elevated);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-hover: var(--hover);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-subtle: var(--subtle);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-error-soft: var(--error-soft);
+  --color-destructive: var(--destructive);
+
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* { box-sizing: border-box; border-color: var(--border); }
+html { scroll-behavior: smooth; color-scheme: dark; }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Leaflet needs a few overrides to sit on a dark UI */
+.leaflet-container { background: var(--elevated); font-family: inherit; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--popover); color: var(--popover-foreground); }
+
+/* Applied from Settings > Appearance > Reduce motion */
+html[data-reduce-motion="true"] *, html[data-reduce-motion="true"] *::before, html[data-reduce-motion="true"] *::after {
+  animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important;
+}

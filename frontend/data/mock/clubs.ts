@@ -1,0 +1,13 @@
+import type { Club } from "@/types/domain";
+
+const base = { universityId: "lpu", isSample: true, contactNote: "Sample club. Official contact details are not included in demo data." };
+export const CLUBS: Club[] = [
+  { ...base, id: "cl_01", name: "Code & Compile Society", category: "Technology", description: "A peer-learning group for developers: weekly problem solving, open-source sprints and mock interviews.", activities: ["Weekly DSA sessions", "Open-source sprints", "Mock technical interviews"], tags: ["Programming", "Open source", "DSA"], featured: true },
+  { ...base, id: "cl_02", name: "Robotics & Automation Circle", category: "Technology", description: "Hands-on builds with microcontrollers, sensors and small robots.", activities: ["Build nights", "Line-follower contests", "Sensor workshops"], tags: ["Robotics", "IoT", "Arduino"], featured: true },
+  { ...base, id: "cl_03", name: "Design Collective", category: "Creative", description: "A community for UI/UX, illustration and visual design with portfolio reviews.", activities: ["Figma jams", "Portfolio reviews", "Design critiques"], tags: ["UI/UX", "Illustration", "Branding"], featured: true },
+  { ...base, id: "cl_04", name: "Entrepreneurship Cell", category: "Business", description: "Helps students test startup ideas with mentors, pitch practice and case discussions.", activities: ["Pitch nights", "Founder talks", "Idea validation clinics"], tags: ["Startups", "Pitching", "Product"], featured: false },
+  { ...base, id: "cl_05", name: "Drama & Theatre Group", category: "Cultural", description: "Stage plays, street theatre and improv for beginners and regulars.", activities: ["Improv evenings", "Street plays", "Annual production"], tags: ["Theatre", "Public speaking"], featured: false },
+  { ...base, id: "cl_06", name: "Football & Fitness Club", category: "Sports", description: "Casual matches, training sessions and inter-hostel tournaments.", activities: ["Evening matches", "Fitness sessions", "Inter-hostel league"], tags: ["Football", "Fitness"], featured: false },
+  { ...base, id: "cl_07", name: "Photography Society", category: "Creative", description: "Photo walks, editing workshops and campus exhibitions.", activities: ["Photo walks", "Editing workshops", "Exhibitions"], tags: ["Photography", "Editing"], featured: false },
+  { ...base, id: "cl_08", name: "Environment & Service Club", category: "Social", description: "Campus clean-ups, tree plantation drives and community outreach.", activities: ["Plantation drives", "Clean-up days", "Awareness campaigns"], tags: ["Volunteering", "Sustainability"], featured: false },
+];
